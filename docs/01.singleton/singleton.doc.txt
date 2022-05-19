@@ -1,0 +1,12 @@
+Mục đích:
+    - Muốn có những đối tượng cần tồn tại duy nhất và có thể truy xuất mọi lúc mọi nơi.
+    - Không xài biến toàn cục(global variable) phá vỡ quy tắc đóng gói của Lập trình hướng đối tượng.
+Ưu điểm
+    - Đối tượng singleton chỉ được khởi tạo duy nhất một lần khi nó được yêu cầu lần đầu.
+    - Có khả năng truy cập đến instance từ mọi nơi
+Nhược điểm:
+    - Vi phạm Single Responsibility Principle. 
+    - Singleton pattern có thể thể hiện thiết kế kém (bad design), chẳng hạn, khi các thành phần của chương trình biết quá nhiều về nhau.
+    - Có thể sinh ra khó khăn trong việc unit test client code của Singleton bởi nhiều test frameworks dựa vào kế thừa khi sản sinh mock objects.
+Ví dụ:
+    - Shared resource, Logger, Configuration, Caching, Thread pool

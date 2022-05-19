@@ -1,0 +1,20 @@
+Mục đích:
+    - Muốn tạo ra một object của một type nào đấy, nhưng chúng ta không biết rõ mình sẽ phải tạo ra cái gì, 
+    mà nó phải dựa vào một số điều kiện business logic đầu vào để tạo ra object tương ứng
+    - Tạo ra một cách khởi tạo object mới thông qua một interface chung
+    - Che giấu quá trình xử lý logic của phương thức khởi tạo
+    - Giảm sự phụ thuộc, dễ dàng mở rộng
+    - Giảm khả năng gây lỗi compile
+Ưu điểm: 
+    - Che giấu quá trình xử lý logic của phương thức khởi tạo
+    - Hạn chế sự phụ thuộc giữa creator và concrete products
+    - Dễ dàng mở rộng, thêm những đoạn code mới vào chương trình mà không cần phá vỡ các đối tượng ban đầu
+    - Giúp gom các đoạn code tạo ra product vào một nơi trong chương trình, nhờ đó giúp dễ theo dõi và thao tác.
+    - Giảm khả năng gây lỗi compile, trong trường hợp chúng ta cần tạo một đối tượng mà quên khai báo lớp, 
+    chúng ta cũng có thể xử lý lỗi trong Factory và khai báo lớp cho chúng sau.
+Nhược điểm:
+    - Source code có thể trở nên phức tạp hơn mức bình thường do đòi hỏi phải sử dụng nhiều class mới có thể cài đặt được pattern này.
+    - Việc refactoring ( tái cấu trúc ) một class bình thường có sẵn thành một class có Factory Method có thể dẫn đến nhiều lỗi trong hệ thống, phá vỡ sự tồn tại của clients
+    - Factory method pattern lệ thuộc vào việc sử dụng private constructor nên các class không thể mở rộng và kế thừa
+
+Factory: Nhà máy, nếu không làm cong nghiệp thì có thể làm thủ công nhưng khi cần sửa phải update nhiều nơi

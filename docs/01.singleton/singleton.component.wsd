@@ -1,0 +1,18 @@
+@startuml
+    left to right direction
+    cloud {
+        [Singleton] as STN
+    }
+    database "Database" as DB{
+    }
+
+    actor Client1 as U1 
+    actor Client2 as U2 
+    actor Client3 as U3
+
+    U1 --> STN: "Request"
+    U2 --> STN: "Request"
+    U3 --> STN: "Request"
+
+    STN --> DB
+@enduml

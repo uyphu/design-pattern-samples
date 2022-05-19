@@ -1,0 +1,12 @@
+@startuml
+    left to right direction
+    circle          Client
+    class Singleton {
+        - {static} instance: Singleton
+        - Singleton()
+        + getInstance(): Singleton
+    }
+
+    Client --> Singleton
+    Singleton --> Singleton
+@enduml
